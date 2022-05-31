@@ -40,7 +40,15 @@
 * `make start` - start proxy on 3000 port (configure store in `.env` file)
 * `make stop` - stop proxy
 
-
+## Helper Scripts
+* `build`: Clean build the Http server
+* `start`: Run the proxy server
+* `start_local_docker` : Start all docker containers
+* `stop_local_docker` : Stop all docker containers
+* `restart`: Restart the proxy server
+* `populate`: Populate data
+* `get_values_from_api`: Get specific value from the API
+* `test`: Test all test cases
 
 ### How long you spent on each part of the project
 * Architecture & Design `1 hour`
