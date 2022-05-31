@@ -17,10 +17,10 @@
 * return 404 if value not found
 
 ## Architectural & UML
-![alt text](./Rescale_redis_proxy_UML.png)
+![alt text](./Rescale_redis_proxy_Architecture.png)
 
 ## Docker containers running
-![alt text](./Docker_containers.png)
+![alt text](./Docker_containerList.png)
 
 
 ## How do we run the test ? 
