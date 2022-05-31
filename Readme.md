@@ -16,6 +16,12 @@
 * The request queue gets tasks based on the maxParallelRequests it can handle 
 * return 404 if value not found
 
+## Architectural & UML
+![alt text](./Rescale_redis_proxy_UML.png)
+
+## Docker containers running
+![alt text](./Docker_containers.png)
+
 
 ## How do we run the test ? 
 * To run tests use 
