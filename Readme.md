@@ -7,5 +7,8 @@
 * bash
 
 ## How do we run the test ? 
-* to run tests use `make test`
+* To run tests use 
+  ```sh
+  make test
+  ```
 * Alternatively if you're in the dev environment and have recently pulled the repository
