@@ -7,6 +7,8 @@
   "scripts": {
     "build": "rm -rf build && tsc",
     "start": "node ./build/src/index.js",
+    "start_local_docker" : "docker-compose -f docker-compose.dev.yml up -d",
+    "stop_local_docker" : "docker-compose -f docker-compose.dev.yml down",
     "restart": "docker-compose -f docker-compose.dev.yml restart proxy",
     "populate": "node ./build/utils/populateRedis.js",
     "get_values_from_api": "node ./build/utils/getValuesViaApi.js",

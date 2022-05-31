@@ -1,4 +1,4 @@
-.PHONY : test fillRedis getValuesFromApi
+.PHONY : test fillRedis getValuesViaApi
 
 test:
 	docker-compose down -v
@@ -18,7 +18,7 @@ fillRedis:
 	docker-compose up -d
 	docker-compose run --rm -T proxy npm run populate_redis
 
-getValuesFromApi:
+getValuesViaApi:
 	docker-compose up -d
-	docker-compose run --rm -T proxy npm run get_values_from_api $@
+	docker-compose run --rm -T proxy npm run get_values_via_api $@
 
