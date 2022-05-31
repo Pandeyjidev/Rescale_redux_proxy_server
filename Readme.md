@@ -37,3 +37,18 @@
   ```
 * `make fillRedis` - fill redis by values (`key_1`, `key_2`, etc.)
 * `make getValuesViaApi key_1 key_2` - get values from redis via api
+* `make start` - start proxy on 3000 port (configure store in `.env` file)
+* `make stop` - stop proxy
+
+
+
+### How long you spent on each part of the project
+* Architecture & Design `1 hour`
+* LRU Cache `2 hours `
+* Message Queue `1 hour`
+* HTTP web service `2 hour`
+* Redis client `1 hour`
+* wsl2 issue not running docker `2 hours` -- blocked me for a bit
+* Tests `2 hours`
+* Bonus requirement : Parallel concurrent processing `3 hours`
+* Makefile, Readme and images `2 hours`
