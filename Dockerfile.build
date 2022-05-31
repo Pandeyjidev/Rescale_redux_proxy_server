@@ -1,0 +1,15 @@
+FROM node:14
+
+ARG APP_PATH=/usr/share/nodejs-proxy
+
+ENV NODE_ENV production
+
+WORKDIR ${APP_PATH}
+
+ADD . ${APP_PATH}
+
+RUN npm i --production=false
+
+RUN npm run build
+
+CMD ["node", "build/src/index.js"]

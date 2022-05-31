@@ -1,0 +1,16 @@
+{
+  "appPort": "PORT",
+  "maxParallelRequests": "MAX_PARALLEL_REQUESTS",
+  "maxConnections": "MAX_CONNECTIONS",
+  "cache": {
+    "capacity": "CACHE_CAPACITY",
+    "ttl": "CACHE_TTL"
+  },
+  "connections": {
+    "redis": {
+      "database": "REDIS_DATABASE",
+      "host": "REDIS_HOST",
+      "port": "REDIS_PORT"
+    }
+  }
+}

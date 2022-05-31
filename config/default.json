@@ -1,0 +1,17 @@
+{
+    "appPort": 3000,
+    "maxParallelRequests": 50,
+    "maxConnections": 10,
+    "cache": {
+      "capacity": 50,
+      "ttl": 500
+    },
+    "connections": {
+      "redis": {
+        "database": 0,
+        "host": "localhost",
+        "port": 6379
+      }
+    }
+  }
+  

@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+      "experimentalDecorators": true,
+    "outDir": "./build/",       // path to output directory
+    "sourceMap": true,          // allow sourcemap support
+    "allowJs": false,           // allow a partial TypeScript and JavaScript codebase,
+    // strict without alwaysStrict
+    "noImplicitThis": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "declaration": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "module": "commonjs",
+    "target": "es2017",
+    "baseUrl": "."
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
+  "include": [
+    "./src/",
+    "./test/",
+    "./utils/"
+  ]
+}

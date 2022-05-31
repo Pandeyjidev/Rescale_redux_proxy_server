@@ -1,0 +1,53 @@
+version: "3"
+
+services:
+  redis:
+    image: redis:latest
+    volumes:
+      - "redis-data:/data"
+    ports:
+      - 6379:6379
+    networks:
+      - backend
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    environment:
+      UPSTREAMS: proxy:3000
+    networks:
+      - backend
+    depends_on:
+      - proxy
+
+  proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    environment:
+      PORT: 3000
+      MAX_PARALLEL_REQUESTS: 1
+      MAX_CONNECTIONS: 10
+      REDIS_DATABASE: 0
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      CACHE_CAPACITY: 100
+      CACHE_TTL: 10000
+    networks:
+      - backend
+    volumes:
+      - .:/usr/share/nodejs-proxy
+    working_dir: /usr/share/nodejs-proxy
+    depends_on:
+      - redis
+    command: npm run start
+    ports:
+      - 8081:3000
+
+volumes:
+  redis-data:
+
+networks:
+  backend:
